@@ -53,7 +53,7 @@ class Controller():
         self.max_batch_size = 4
 
         self.batch_processing_size = config['inference_config']['batch_processing_size']
-        self.inference_step = config['inference_config']['inference_step']
+        #self.inference_step = config['inference_config']['inference_step']
         
         model_path = config['models_config']['path']
         self.sdxl_model_path = model_path['sdxl_model']
