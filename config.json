@@ -1,0 +1,14 @@
+{
+    "control_config" {
+        "batch_processing_size" : 5
+    },
+    "models_config" : {
+        "path" : {
+            "sdxl_model" : "stabilityai/stable-diffusion-xl-base-1.0",
+            "text_inversion_models" : ["sd-concepts-library/cat-toy", "sd-concepts-library/nebula"],
+            "control_net_model" : "diffusers/controlnet-canny-sdxl-1.0",
+            "background_remove_model" : "",
+            "inpainting_fill_model" : ""
+        }
+    }
+}
