@@ -1,14 +1,17 @@
 {
-    "control_config" {
-        "batch_processing_size" : 5
+    "control_config" : {
+        "max_batch_size" : 5,
+        "num_inference_step" : 10
     },
     "models_config" : {
+        "current_model" : "sdxl_turbo",
         "path" : {
-            "sdxl_model" : "stabilityai/stable-diffusion-xl-base-1.0",
-            "text_inversion_models" : ["sd-concepts-library/cat-toy", "sd-concepts-library/nebula"],
-            "control_net_model" : "diffusers/controlnet-canny-sdxl-1.0",
-            "background_remove_model" : "",
-            "inpainting_fill_model" : ""
+            "sdxl" : "stabilityai/stable-diffusion-xl-base-1.0",
+            "sdxl_turbo" : "stabilityai/sdxl-turbo",
+            "text_inversion" : ["sd-concepts-library/cat-toy", "sd-concepts-library/nebula"],
+            "control_net" : "diffusers/controlnet-canny-sdxl-1.0",
+            "background_remove" : "",
+            "inpainting_fill" : ""
         }
     }
 }
