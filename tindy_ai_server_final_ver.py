@@ -95,12 +95,9 @@ class GenerationManager():
         while True:
             temp_list = []
             # Collect all available requests, up to the batch size
-            try:
-              for _ in range(self.max_batch_size):
-                  temp_list.append(self.image_generation_queue.get(block=False))
-                  self.logger.info(f"[Batch] Got a request. Queue size: {self.image_generation_queue.qsize()}")
-            except Empty:
-              pass
+            for _ in range(self.max_batch_size):
+                temp_list.append(self.image_generation_queue.get())
+                self.logger.info(f"[Batch] Got a request. Queue size: {self.image_generation_queue.qsize()}")
 
             if not temp_list:
               continue
